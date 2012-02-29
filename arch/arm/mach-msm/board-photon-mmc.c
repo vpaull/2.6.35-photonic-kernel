@@ -231,7 +231,7 @@ static unsigned int photon_wifi_status(struct device *dev)
 }
 
 static struct mmc_platform_data photon_wifi_data = {
-	.ocr_mask		= MMC_VDD_28_29,
+	.ocr_mask		= MMC_VDD_27_28, //lowered wifi voltage
 	.status			= photon_wifi_status,
 	.register_status_notify	= photon_wifi_status_register,
 	.embedded_sdio		= &photon_wifi_emb_data,
